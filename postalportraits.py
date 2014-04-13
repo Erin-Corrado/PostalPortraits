@@ -70,9 +70,9 @@ keyiter =0
 for eachkey in keywords:
     keywords[keyiter]=float(eachkey)/float((length[keyiter]))
     keyiter = keyiter+1
-p.pprint(keywords)    
-p.pprint(mood)
-p.pprint(length)
+#p.pprint(keywords)    
+#p.pprint(mood)
+#p.pprint(length)
    #i p.pprint(analyzedString)
 #emailList = requests.get('https://api.context.io/2.0/accounts/53499105064ba30834b4b0c0/messages?body_type=text%2Fplain&include_body=1&limit=15&sort_order=desc')
 #iemailList = requests.get('https://api.context.io/2.0/accounts/53499105064ba30834b4b0c0/messages')
