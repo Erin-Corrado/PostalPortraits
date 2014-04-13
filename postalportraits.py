@@ -2,6 +2,8 @@ import requests
 import pprint as p
 import contextio as c
 import string
+from PIL import Image, ImageEnhance, ImageFilter
+import random
 
 CONSUMER_KEY = 'xrmwwe7e'
 CONSUMER_SECRET = 'iLkQIPm9M9dedwLH'
@@ -75,5 +77,71 @@ p.pprint(length)
 #emailList = requests.get('https://api.context.io/2.0/accounts/53499105064ba30834b4b0c0/messages?body_type=text%2Fplain&include_body=1&limit=15&sort_order=desc')
 #iemailList = requests.get('https://api.context.io/2.0/accounts/53499105064ba30834b4b0c0/messages')
 #print(emailList)
-   
+
+img = raw_input("Enter name of image file: ")
+imagefile = Image.open(img)
+imagefile.show()
+
+for i in mood:
+  i = i + 1
+  
+average = float(sum(mood) / len(mood))
+
+if average > 1.3:
+  r = float(average*127.5)
+  g = float((255-r)/2)
+  b = float((255-r)/2)
+  
+elif average >= 0.6:
+  g = float(average*127.5)
+  r = float((255-g)/2)
+  b = float((255-g)/2)
+  
+else:
+  b = float(average*127.5)
+  r = float((255-b)/2)
+  g = float((255-b)/2)
+
+color = '#%02x%02x%02x' % (r, g, b)
+overlay = Image.new(imagefile.mode, imagefile.size, color)
+
+imagefile = Image.blend(imagefile, overlay, 0.5)
+
+averageLength = float(sum(length) / len(length))
+
+if averageLength <= 50:
+  radius = 1
+  
+elif averageLength <= 125:
+  radius = random.randint(2,3)
+  
+elif averageLength <= 225:
+  radius = random.randint(4,5)
+  
+elif averageLength <= 400:
+  radius = random.randint(6,7)
+  
+elif averageLength <= 550:
+  radius = 8
+  
+elif averageLength <= 750:
+  radius = 9
+  
+else:
+  radius = 10
+
+imagefile = imagefile.filter(ImageFilter.GaussianBlur(radius))
+
+enhancer = ImageEnhance.Brightness(imagefile)
+
+averageFactor = float(sum(keywords) / len(keywords))
+
+factor = float(averageFactor*10+1)
+
+
+
+finalimg = enhancer.enhance(factor)
+
+finalimg.show()
+
 
