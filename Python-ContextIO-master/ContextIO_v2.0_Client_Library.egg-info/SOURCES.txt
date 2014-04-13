@@ -1,0 +1,10 @@
+setup.cfg
+setup.py
+ContextIO_v2.0_Client_Library.egg-info/PKG-INFO
+ContextIO_v2.0_Client_Library.egg-info/SOURCES.txt
+ContextIO_v2.0_Client_Library.egg-info/dependency_links.txt
+ContextIO_v2.0_Client_Library.egg-info/not-zip-safe
+ContextIO_v2.0_Client_Library.egg-info/requires.txt
+ContextIO_v2.0_Client_Library.egg-info/top_level.txt
+contextio/__init__.py
+contextio/util.py

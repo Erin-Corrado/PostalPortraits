@@ -1,0 +1,13 @@
+contextio Changes
+================
+
+This document shows changes between versions of this client library
+
+v1.1
+* replaced oauth2 library with rauth
+* changed formatting of print/log debug messages
+* changed README to reflect dependency changes
+
+v1.0
+* initial check-in
+* hello world
