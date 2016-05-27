@@ -59,5 +59,5 @@ over the direct GET request, then you can download the python module at:
 
 The mood/tone of the conversation is reflected through the overlayed color of the image. More red for more positive feelings, and more blue for negative feelings.
 The length of the conversation and messages corresponds to the image's Gaussian blur. The longer the average message, the greater the blur.
-The ratio of keywords to total words is used to determine the luminosity of the image. The more keywords, the brighter the image. The more noise words, the more contrast the image is.
+The ratio of keywords to total words is used to determine the luminosity of the image. The more keywords, the brighter the image. The more noise words, the more contrast there is in the image.
 
