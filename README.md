@@ -42,7 +42,7 @@ over the direct GET request, then you can download the python module at:
 
 ## Sample Run
 
-###Before
+#### Before
 
 ![Before Image](huskybefore.jpg "Before Image")
 
@@ -50,12 +50,12 @@ over the direct GET request, then you can download the python module at:
 
 
 
-####After
+#### After
 
 ![After Image](huskyafter.jpg "After Image")
 
 
-##Image Manipulation
+## Image Manipulation
 
 The mood/tone of the conversation is reflected through the overlayed color of the image. More red for more positive feelings, and more blue for negative feelings.
 The length of the conversation and messages corresponds to the image's Gaussian blur. The longer the average message, the greater the blur.
